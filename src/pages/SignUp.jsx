@@ -6,6 +6,10 @@ import { motion } from "framer-motion";
 
 function SignUp() {
   const navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -19,7 +23,10 @@ function SignUp() {
         className="flex  items-center justify-evenly gap-2 rounded-2xl p-8 mx-auto max-w-5xl w-full md:p-4"
         style={{ boxShadow: "0px 10px 30px 10px rgb(186, 213, 238)" }}
       >
-        <div className="flex flex-col items-center justify-center w-full md:w-1/2">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col items-center justify-center w-full md:w-1/2"
+        >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">SignUp</h1>
           <div className="flex flex-col items-center justify-start gap-6 w-full p-4">
             <input
@@ -65,7 +72,7 @@ function SignUp() {
               </span>
             </p>
           </div>
-        </div>
+        </form>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
