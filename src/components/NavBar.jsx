@@ -76,53 +76,53 @@ function NavBar() {
               ></ion-icon>
             )}
           </li>
-          {isopen && (
-            <div className="fixed top-20 right-0 w-full h-full bg-black bg-opacity-50 z-50 pt-10">
-              <motion.div
-                variants={parentVariants}
-                initial="hidden"
-                animate="visible"
-                className="bg-white/80 p-4  w-full h-1/2  relative -top-10 "
-              >
-                <motion.ul className="flex flex-col space-y-4 items-center">
-                  <Link>
-                    <motion.button
-                      variants={childVariants}
-                      initial="hidden"
-                      animate="visible"
-                      custom={0}
-                      className="text-[#1170CD]  text-xl  hover:text-[#0E5BAA] transition-all duration-300"
-                    >
-                      Resume Analyse
-                    </motion.button>
-                  </Link>
-                  <Link>
-                    <motion.button
-                      variants={childVariants}
-                      initial="hidden"
-                      animate="visible"
-                      custom={1}
-                      className="bg-[#1170CD] text-white py-3 px-6 rounded-full  hover:bg-[#0E5BAA] transition-all duration-300 "
-                    >
-                      My Account
-                    </motion.button>
-                  </Link>
-                  <Link>
-                    <motion.button
-                      variants={childVariants}
-                      initial="hidden"
-                      animate="visible"
-                      custom={2}
-                      className="bg-[#1170CD] text-white py-3 px-6 rounded-full  hover:bg-[#0E5BAA] transition-all duration-300"
-                    >
-                      Dash Board
-                    </motion.button>
-                  </Link>
-                </motion.ul>
-              </motion.div>
-            </div>
-          )}
         </ul>
+        {isopen && (
+          <div className="transfrom translate-y-10  top-10 left-10 w-[90%] mx-auto       h-full bg-white/80 flex items-center justify-center  ">
+            <motion.div
+              variants={parentVariants}
+              initial="hidden"
+              animate="visible"
+              className="bg-white/80 p-4  w-full h-1/2  relative -top-10 "
+            >
+              <motion.ul className="flex flex-col space-y-4 items-center">
+                <Link>
+                  <motion.button
+                    variants={childVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={0}
+                    className="text-[#1170CD]  text-xl  hover:text-[#0E5BAA] transition-all duration-300"
+                  >
+                    Resume Analyse
+                  </motion.button>
+                </Link>
+                <Link>
+                  <motion.button
+                    variants={childVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={1}
+                    className="bg-[#1170CD] text-white py-3 px-6 rounded-full  hover:bg-[#0E5BAA] transition-all duration-300 "
+                  >
+                    My Account
+                  </motion.button>
+                </Link>
+                <Link>
+                  <motion.button
+                    variants={childVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={2}
+                    className="bg-[#1170CD] text-white py-3 px-6 rounded-full  hover:bg-[#0E5BAA] transition-all duration-300"
+                  >
+                    Dash Board
+                  </motion.button>
+                </Link>
+              </motion.ul>
+            </motion.div>
+          </div>
+        )}
       </nav>
     </div>
   );

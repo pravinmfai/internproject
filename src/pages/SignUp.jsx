@@ -32,17 +32,20 @@ function SignUp() {
             <input
               className="border border-gray-400 p-4 outline-none shadow-md rounded-md focus:ring-1 focus:ring-blue-600  text-center max-sm:rounded-full max-sm:w-full w-80 m-auto "
               type="text"
-              placeholder="Email"
+              placeholder="UserName"
+              required
+            />
+            <input
+              className="border border-gray-400 p-4 outline-none shadow-md  rounded-md focus:ring-1 focus:ring-blue-600 text-center max-sm:rounded-full max-sm:w-full  w-80 m-auto"
+              type="password"
+                placeholder="Email"
+              required
             />
             <input
               className="border border-gray-400 p-4 outline-none shadow-md  rounded-md focus:ring-1 focus:ring-blue-600 text-center max-sm:rounded-full max-sm:w-full  w-80 m-auto"
               type="password"
               placeholder="Password"
-            />
-            <input
-              className="border border-gray-400 p-4 outline-none shadow-md  rounded-md focus:ring-1 focus:ring-blue-600 text-center max-sm:rounded-full max-sm:w-full  w-80 m-auto"
-              type="password"
-              placeholder="Password"
+              required
             />
 
             <button className="bg-[#1170CD] text-white p-2 w-40 rounded-full cursor-pointer hover:bg-[#0E5BAA] transition-all duration-300">
